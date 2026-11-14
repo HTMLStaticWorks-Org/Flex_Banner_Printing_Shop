@@ -1430,23 +1430,44 @@ h6 {
 }
 
 .filter-pills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.55rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .filter-pills {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.55rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .filter-pills {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0.6rem;
+  }
 }
 
 .filter-btn {
   font-family: var(--font-heading);
-  font-size: 0.8125rem;
+  font-size: 0.78rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  padding: 0.6rem 1.05rem;
+  padding: 0.65rem 0.45rem;
   background-color: var(--color-white);
   color: var(--color-charcoal);
   border: 1px solid var(--color-grey-border);
   border-radius: var(--radius-xs);
   transition: background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 42px;
+  width: 100%;
 }
 
 .filter-btn:hover {
@@ -1507,6 +1528,8 @@ h6 {
 }
 
 .product-card__img {
+  position: relative;
+  z-index: 1;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1521,6 +1544,7 @@ h6 {
   position: absolute;
   top: 0.85rem;
   left: 0.85rem;
+  z-index: 5;
   background-color: var(--color-charcoal);
   color: var(--color-white);
   font-family: var(--font-heading);
@@ -1530,6 +1554,7 @@ h6 {
   letter-spacing: 0.08em;
   padding: 0.32rem 0.65rem;
   border-left: 3px solid var(--color-secondary);
+  pointer-events: none;
 }
 
 .product-card__body {
@@ -1542,23 +1567,37 @@ h6 {
 
 .product-card__title {
   font-size: 1.28rem;
+  line-height: 1.25;
   text-transform: uppercase;
   margin-bottom: 0.4rem;
 }
 
 .product-card__desc {
   font-size: 0.94rem;
+  line-height: 1.55;
   color: var(--color-text-muted);
 }
 
+@media (min-width: 768px) {
+  .product-card__title {
+    min-height: 2.5em;
+  }
+
+  .product-card__desc {
+    min-height: 6.2em;
+  }
+}
+
 .product-card__specs {
-  margin-top: auto;
+  margin-top: 0;
+  flex: 1;
   background-color: var(--color-grey);
   border: 1px solid var(--color-grey-border);
   padding: 0.95rem 1.1rem;
   border-radius: var(--radius-xs);
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 0.6rem;
 }
 
@@ -2242,7 +2281,68 @@ textarea.form-control {
   }
 }
 
-/* Responsive Stacked Cards for Rate Card Tables on Mobile */
+/* Responsive Stacked Cards for Rate Card Tables on Mobile & Tab View */
+@media (max-width: 991.98px) {
+  .rate-table thead {
+    display: none;
+  }
+
+  .rate-table,
+  .rate-table tbody,
+  .rate-table tr,
+  .rate-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .rate-table tr {
+    padding: 1.25rem;
+    border-bottom: 2px solid var(--color-grey-border);
+  }
+
+  .rate-table tbody tr:last-child {
+    border-bottom: none;
+  }
+
+  .rate-table td {
+    padding: 0.55rem 0;
+    border-bottom: 1px dashed var(--color-grey-border);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    text-align: right;
+  }
+
+  .rate-table td:last-child {
+    display: block;
+    border-bottom: none;
+    padding-top: 0.9rem;
+    text-align: center;
+  }
+
+  .rate-table td::before {
+    content: attr(data-label);
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-text-muted);
+    text-align: left;
+    flex-shrink: 0;
+  }
+
+  .rate-table td:last-child::before {
+    display: none;
+  }
+
+  .rate-table td:last-child .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 @media (max-width: 767.98px) {
   .hero__spec-strip {
     grid-template-columns: 1fr;
@@ -2260,54 +2360,6 @@ textarea.form-control {
   }
 
   .btn-group .btn {
-    width: 100%;
-  }
-
-  .rate-table thead {
-    display: none;
-  }
-
-  .rate-table,
-  .rate-table tbody,
-  .rate-table tr,
-  .rate-table td {
-    display: block;
-    width: 100%;
-  }
-
-  .rate-table tr {
-    padding: 1.15rem;
-    border-bottom: 2px solid var(--color-grey-border);
-  }
-
-  .rate-table td {
-    padding: 0.45rem 0;
-    border-bottom: 1px dashed var(--color-grey-border);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    text-align: right;
-  }
-
-  .rate-table td:last-child {
-    border-bottom: none;
-    padding-top: 0.85rem;
-  }
-
-  .rate-table td::before {
-    content: attr(data-label);
-    font-family: var(--font-heading);
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: var(--color-text-muted);
-    text-align: left;
-    flex-shrink: 0;
-  }
-
-  .rate-table td:last-child .btn {
     width: 100%;
   }
 }
@@ -2708,12 +2760,12 @@ textarea.form-control {
   transform: translateY(-6px);
   transition: opacity var(--transition-fast), transform var(--transition-fast);
   pointer-events: none;
-  z-index: 2;
+  z-index: 10;
 }
 
 .studio-card:hover .studio-card__tag {
-  opacity: 1;
-  transform: translateY(0);
+  opacity: 1 !important;
+  transform: translateY(0) !important;
 }
 
 .studio-card__tag--orange {
