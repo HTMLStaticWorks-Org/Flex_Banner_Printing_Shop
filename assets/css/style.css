@@ -1299,6 +1299,48 @@ h6 {
   border-left: 6px solid var(--color-primary);
 }
 
+/* Promo Banner CTA Equal Button Sizing & Mobile Alignment */
+.promo-banner .btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 1rem;
+  width: 100%;
+}
+
+.promo-banner .btn-group .btn {
+  flex: 1 1 250px;
+  max-width: 280px;
+  min-height: 52px;
+  padding: 0.95rem 1.25rem;
+  justify-content: center;
+  text-align: center;
+}
+
+@media (max-width: 767.98px) {
+  .promo-banner__content {
+    align-items: stretch;
+  }
+
+  .promo-banner .btn-group {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    gap: 0.85rem !important;
+  }
+
+  .promo-banner .btn-group .btn {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    flex: 0 0 auto !important;
+    font-size: 0.86rem !important;
+    padding: 0.95rem 1rem !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+}
+
 .promo-banner__media {
   position: relative;
   min-height: 300px;
