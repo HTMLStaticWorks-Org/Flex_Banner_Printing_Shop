@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flex &amp; Banner Printing Shop | Professional Printing Services</title>
-  <meta name="description" content="From creative concepts to large-format prints, Flex &amp; Banner Printing Shop delivers high-impact flex banners, vinyl printing, shop signage, roll-up standees, posters, and custom advertising materials.">
-  <meta property="og:title" content="Flex &amp; Banner Printing Shop | Professional Printing Services">
-  <meta property="og:description" content="Your Ideas. Our Print. Big Impact. Large-format flex banners, vinyl printing, shop signage, and custom branding solutions.">
+  <title>Flexco | Professional Printing Services</title>
+  <meta name="description" content="From creative concepts to large-format prints, Flexco delivers high-impact flex banners, vinyl printing, shop signage, roll-up standees, posters, and custom advertising materials.">
+  <meta property="og:title" content="Flexco | Professional Printing Services">
+  <meta property="og:description"
+    content="Your Ideas. Our Print. Big Impact. Large-format flex banners, vinyl printing, shop signage, and custom branding solutions.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/images/hero-printing.webp">
 
   <!-- Google Fonts: Space Grotesk & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap"
+    rel="stylesheet">
 
   <!-- Bootstrap Icons CDN (Icons Only) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -21,6 +25,7 @@
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
@@ -29,22 +34,22 @@
        ======================================================================== -->
   <header class="site-header" id="siteHeader">
     <div class="container navbar">
-      <!-- LEFT: Brand Logo + FLEX & BANNER PRINTING -->
-      <a href="index.html" class="brand-logo" aria-label="Flex &amp; Banner Printing Home">
-        <svg class="brand-logo__mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect x="2" y="2" width="44" height="44" rx="4" fill="#17191F"/>
-          <path d="M12 10H29L36 17V38H12V10Z" fill="#FFFFFF"/>
-          <path d="M29 10V17H36L29 10Z" fill="#2457FF"/>
-          <rect x="16" y="21" width="16" height="4" rx="1" fill="#2457FF"/>
-          <rect x="16" y="27" width="11" height="4" rx="1" fill="#FF6B35"/>
-          <circle cx="17.5" cy="34.5" r="1.5" fill="#00ADEF"/>
-          <circle cx="22" cy="34.5" r="1.5" fill="#EC008C"/>
-          <circle cx="26.5" cy="34.5" r="1.5" fill="#FFF200"/>
-          <circle cx="31" cy="34.5" r="1.5" fill="#17191F"/>
+      <!-- LEFT: Brand Logo + FLEXCO -->
+      <a href="index.html" class="brand-logo" aria-label="Flexco Home">
+        <svg class="brand-logo__mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true">
+          <rect x="2" y="2" width="44" height="44" rx="4" fill="#17191F" />
+          <path d="M12 10H29L36 17V38H12V10Z" fill="#FFFFFF" />
+          <path d="M29 10V17H36L29 10Z" fill="#2457FF" />
+          <rect x="16" y="21" width="16" height="4" rx="1" fill="#2457FF" />
+          <rect x="16" y="27" width="11" height="4" rx="1" fill="#FF6B35" />
+          <circle cx="17.5" cy="34.5" r="1.5" fill="#00ADEF" />
+          <circle cx="22" cy="34.5" r="1.5" fill="#EC008C" />
+          <circle cx="26.5" cy="34.5" r="1.5" fill="#FFF200" />
+          <circle cx="31" cy="34.5" r="1.5" fill="#17191F" />
         </svg>
         <div class="brand-logo__text">
-          <span class="brand-logo__title">FLEX &amp; BANNER PRINTING SHOP</span>
-          <span class="brand-logo__sub">YOUR IDEAS. OUR PRINT. BIG IMPACT.</span>
+          <span class="brand-logo__title">FLEXCO</span>
         </div>
       </a>
 
@@ -64,13 +69,23 @@
         </a>
       </nav>
 
-      <!-- RIGHT: Get a Quote CTA & Mobile Toggle -->
-      <div style="display:flex;align-items:center;gap:0.75rem;">
+      <!-- RIGHT: Theme, RTL, Get a Quote CTA & Mobile Toggle -->
+      <div class="nav-actions">
+        <button type="button" class="nav-util-btn nav-util-btn--rtl" id="rtlToggle" aria-pressed="false"
+          aria-label="Toggle Right-to-Left layout" title="Toggle RTL / LTR">
+          <i class="bi bi-arrow-left-right" aria-hidden="true"></i>
+          <span class="nav-util-btn__label">RTL</span>
+        </button>
+        <button type="button" class="nav-util-btn nav-util-btn--theme" id="themeToggle" aria-pressed="false"
+          aria-label="Toggle dark and light theme" title="Toggle Theme">
+          <i class="bi bi-moon-stars-fill" aria-hidden="true"></i>
+        </button>
         <a href="contact.html#enquiry-form" class="btn btn--primary btn--sm nav-cta-desktop">
           <span>Get a Quote</span>
           <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
         </a>
-        <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle navigation menu">
+        <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu"
+          aria-label="Toggle navigation menu">
           <i class="bi bi-list" aria-hidden="true"></i>
         </button>
       </div>
@@ -95,7 +110,8 @@
           </div>
 
           <h1 id="hero-heading" class="display-xl hero__title">
-            WE PRINT <span class="text-highlight-blue">BIG IDEAS</span> INTO <span class="text-highlight-orange">REALITY.</span>
+            WE PRINT <span class="text-highlight-blue">BIG IDEAS</span> INTO <span
+              class="text-highlight-orange">REALITY.</span>
           </h1>
 
           <p class="hero__supporting-quote">
@@ -103,7 +119,8 @@
           </p>
 
           <p class="hero__description">
-            From eye-catching flex banners to premium large-format prints, we deliver creative printing solutions that make your brand impossible to ignore.
+            From eye-catching flex banners to premium large-format prints, we deliver creative printing solutions that
+            make your brand impossible to ignore.
           </p>
 
           <div class="btn-group">
@@ -145,14 +162,9 @@
               </span>
             </div>
             <div class="hero__image-wrap">
-              <img
-                src="assets/images/hero-printing.webp"
+              <img src="assets/images/hero-printing.webp"
                 alt="Large-format industrial printing machine producing a vibrant full-colour advertising banner in a modern printing studio"
-                class="hero__image"
-                width="900"
-                height="675"
-                fetchpriority="high"
-              >
+                class="hero__image" width="900" height="675" fetchpriority="high">
             </div>
             <div class="hero__floating-badge">
               <div>
@@ -179,7 +191,8 @@
             </h2>
           </div>
           <p class="lead-text">
-            Engineered for outdoor durability, indoor sophistication, and maximum brand recall across commercial storefronts, exhibitions, and promotional campaigns.
+            Engineered for outdoor durability, indoor sophistication, and maximum brand recall across commercial
+            storefronts, exhibitions, and promotional campaigns.
           </p>
         </div>
 
@@ -188,20 +201,16 @@
           <article class="service-block service-block--span-7 reveal-on-scroll">
             <div class="service-block__media">
               <span class="service-block__index">SERVICE // 01</span>
-              <img
-                src="assets/images/flex-banner.webp"
+              <img src="assets/images/flex-banner.webp"
                 alt="Large outdoor commercial flex banner mounted on an architectural building frame"
-                class="service-block__img"
-                width="760"
-                height="475"
-                loading="lazy"
-              >
+                class="service-block__img" width="760" height="475" loading="lazy">
             </div>
             <div class="service-block__body">
               <div>
                 <h3 class="service-block__title">Flex Banner Printing</h3>
                 <p class="service-block__desc">
-                  Heavy-duty frontlit, backlit, and star flex banners engineered for outdoor hoardings, promotional displays, building wraps, and high-visibility street campaigns with eyelet and hemmed finishing.
+                  Heavy-duty frontlit, backlit, and star flex banners engineered for outdoor hoardings, promotional
+                  displays, building wraps, and high-visibility street campaigns with eyelet and hemmed finishing.
                 </p>
               </div>
               <div class="service-block__footer">
@@ -209,7 +218,8 @@
                   <span>Explore Service</span>
                   <i class="bi bi-arrow-right" aria-hidden="true"></i>
                 </a>
-                <span style="font-size:0.78rem;color:var(--color-text-muted);font-weight:600;">OUTDOOR &amp; INDOOR</span>
+                <span style="font-size:0.78rem;color:var(--color-text-muted);font-weight:600;">OUTDOOR &amp;
+                  INDOOR</span>
               </div>
             </div>
           </article>
@@ -218,20 +228,16 @@
           <article class="service-block service-block--span-5 reveal-on-scroll">
             <div class="service-block__media">
               <span class="service-block__index">SERVICE // 02</span>
-              <img
-                src="assets/images/vinyl-printing.webp"
+              <img src="assets/images/vinyl-printing.webp"
                 alt="Glossy self-adhesive vinyl print being applied smoothly onto an acrylic and glass board"
-                class="service-block__img"
-                width="600"
-                height="375"
-                loading="lazy"
-              >
+                class="service-block__img" width="600" height="375" loading="lazy">
             </div>
             <div class="service-block__body">
               <div>
                 <h3 class="service-block__title">Vinyl Printing</h3>
                 <p class="service-block__desc">
-                  High-tack self-adhesive glossy, matte, transparent, and one-way vision vinyl prints with optional UV lamination for glass storefronts, sunboard mounting, and branding panels.
+                  High-tack self-adhesive glossy, matte, transparent, and one-way vision vinyl prints with optional UV
+                  lamination for glass storefronts, sunboard mounting, and branding panels.
                 </p>
               </div>
               <div class="service-block__footer">
@@ -239,7 +245,8 @@
                   <span>Explore Service</span>
                   <i class="bi bi-arrow-right" aria-hidden="true"></i>
                 </a>
-                <span style="font-size:0.78rem;color:var(--color-text-muted);font-weight:600;">MATTE &amp; GLOSS LAMINATION</span>
+                <span style="font-size:0.78rem;color:var(--color-text-muted);font-weight:600;">MATTE &amp; GLOSS
+                  LAMINATION</span>
               </div>
             </div>
           </article>
@@ -248,20 +255,16 @@
           <article class="service-block service-block--span-4 reveal-on-scroll">
             <div class="service-block__media">
               <span class="service-block__index">SERVICE // 03</span>
-              <img
-                src="assets/images/poster-printing.webp"
+              <img src="assets/images/poster-printing.webp"
                 alt="High-resolution custom printed promotional posters arranged on a studio cutting table"
-                class="service-block__img"
-                width="500"
-                height="312"
-                loading="lazy"
-              >
+                class="service-block__img" width="500" height="312" loading="lazy">
             </div>
             <div class="service-block__body">
               <div>
                 <h3 class="service-block__title">Poster Printing</h3>
                 <p class="service-block__desc">
-                  Photo-realistic large-format and standard A3, A2, A1, and A0 promotional posters printed on satin, gloss art paper, and synthetic tear-resistant media.
+                  Photo-realistic large-format and standard A3, A2, A1, and A0 promotional posters printed on satin,
+                  gloss art paper, and synthetic tear-resistant media.
                 </p>
               </div>
               <div class="service-block__footer">
@@ -277,20 +280,16 @@
           <article class="service-block service-block--span-4 reveal-on-scroll">
             <div class="service-block__media">
               <span class="service-block__index">SERVICE // 04</span>
-              <img
-                src="assets/images/shop-signage.webp"
+              <img src="assets/images/shop-signage.webp"
                 alt="Illuminated LED acrylic shop signage board mounted on a modern commercial storefront"
-                class="service-block__img"
-                width="500"
-                height="312"
-                loading="lazy"
-              >
+                class="service-block__img" width="500" height="312" loading="lazy">
             </div>
             <div class="service-block__body">
               <div>
                 <h3 class="service-block__title">Shop Signage</h3>
                 <p class="service-block__desc">
-                  Custom ACP sign boards, LED backlit glow signs, 3D acrylic letter boards, and directional retail fascia panels built to establish commanding street presence.
+                  Custom ACP sign boards, LED backlit glow signs, 3D acrylic letter boards, and directional retail
+                  fascia panels built to establish commanding street presence.
                 </p>
               </div>
               <div class="service-block__footer">
@@ -306,20 +305,16 @@
           <article class="service-block service-block--span-4 reveal-on-scroll">
             <div class="service-block__media">
               <span class="service-block__index">SERVICE // 05</span>
-              <img
-                src="assets/images/rollup-standee.webp"
+              <img src="assets/images/rollup-standee.webp"
                 alt="Retractable aluminum roll-up banner standees displayed in a corporate exhibition venue"
-                class="service-block__img"
-                width="500"
-                height="312"
-                loading="lazy"
-              >
+                class="service-block__img" width="500" height="312" loading="lazy">
             </div>
             <div class="service-block__body">
               <div>
                 <h3 class="service-block__title">Roll-up Standees</h3>
                 <p class="service-block__desc">
-                  Portable retractable aluminum roll-up standees with non-curl PP media or star flex, ideal for trade shows, retail entrances, conferences, and product launches.
+                  Portable retractable aluminum roll-up standees with non-curl PP media or star flex, ideal for trade
+                  shows, retail entrances, conferences, and product launches.
                 </p>
               </div>
               <div class="service-block__footer">
@@ -335,21 +330,18 @@
           <article class="service-block service-block--span-12 reveal-on-scroll">
             <div class="service-block__media">
               <span class="service-block__index">SERVICE // 06</span>
-              <img
-                src="assets/images/sticker-printing.webp"
+              <img src="assets/images/sticker-printing.webp"
                 alt="Custom die-cut vinyl stickers and kiss-cut product packaging labels on a finishing workbench"
-                class="service-block__img"
-                width="720"
-                height="450"
-                loading="lazy"
-              >
+                class="service-block__img" width="720" height="450" loading="lazy">
             </div>
             <div class="service-block__body">
               <div>
                 <span class="eyebrow" style="margin-bottom:0.5rem;">PRECISION CONTOUR CUTTING</span>
                 <h3 class="service-block__title" style="font-size:1.55rem;">Sticker Printing</h3>
                 <p class="service-block__desc" style="max-width:62ch;">
-                  Custom die-cut, kiss-cut, waterproof vinyl stickers, transparent window decals, and product packaging label sheets. Precision plotter-cut to any custom contour or geometric profile with vibrant ink saturation.
+                  Custom die-cut, kiss-cut, waterproof vinyl stickers, transparent window decals, and product packaging
+                  label sheets. Precision plotter-cut to any custom contour or geometric profile with vibrant ink
+                  saturation.
                 </p>
               </div>
               <div class="service-block__footer">
@@ -357,7 +349,8 @@
                   <span>Explore Service</span>
                   <i class="bi bi-arrow-right" aria-hidden="true"></i>
                 </a>
-                <a href="contact.html?category=stickers-labels&amp;product=Custom%20Die-Cut%20Vinyl%20Stickers#enquiry-form" class="btn btn--secondary btn--sm">
+                <a href="contact.html?category=stickers-labels&amp;product=Custom%20Die-Cut%20Vinyl%20Stickers#enquiry-form"
+                  class="btn btn--secondary btn--sm">
                   <span>Request Sticker Quote</span>
                 </a>
               </div>
@@ -380,38 +373,30 @@
             </h2>
           </div>
           <p class="lead-text">
-            Explore how bold large-format print execution transforms commercial facades, exhibition stages, retail interiors, and mobile fleet branding.
+            Explore how bold large-format print execution transforms commercial facades, exhibition stages, retail
+            interiors, and mobile fleet branding.
           </p>
         </div>
 
         <div class="projects-mosaic">
           <!-- Project 1: Outdoor Advertising Banners -->
           <article class="project-tile project-tile--1 reveal-on-scroll">
-            <img
-              src="assets/images/flex-banner.webp"
+            <img src="assets/images/flex-banner.webp"
               alt="Large-scale outdoor advertising banner mounted on an urban commercial facade"
-              class="project-tile__img"
-              width="760"
-              height="420"
-              loading="lazy"
-            >
+              class="project-tile__img" width="760" height="420" loading="lazy">
             <div class="project-tile__overlay">
               <span class="project-tile__category">LARGE-FORMAT HOARDING</span>
               <h3 class="project-tile__title">Outdoor Advertising Banners</h3>
-              <p class="project-tile__meta">Heavy-Duty Star Flex • Weather-Resistant Solvent Ink • Reinforced Eyelets</p>
+              <p class="project-tile__meta">Heavy-Duty Star Flex • Weather-Resistant Solvent Ink • Reinforced Eyelets
+              </p>
             </div>
           </article>
 
           <!-- Project 2: Shop Front Signage -->
           <article class="project-tile project-tile--2 reveal-on-scroll">
-            <img
-              src="assets/images/shop-signage.webp"
-              alt="Illuminated acrylic and LED shop front signage on a modern retail exterior"
-              class="project-tile__img"
-              width="560"
-              height="420"
-              loading="lazy"
-            >
+            <img src="assets/images/shop-signage.webp"
+              alt="Illuminated acrylic and LED shop front signage on a modern retail exterior" class="project-tile__img"
+              width="560" height="420" loading="lazy">
             <div class="project-tile__overlay">
               <span class="project-tile__category project-tile__category--orange">ARCHITECTURAL FASCIA</span>
               <h3 class="project-tile__title">Shop Front Signage</h3>
@@ -421,14 +406,9 @@
 
           <!-- Project 3: Event Promotional Backdrops -->
           <article class="project-tile project-tile--3 reveal-on-scroll">
-            <img
-              src="assets/images/event-backdrop.webp"
-              alt="Wide-format event promotional stage backdrop in a conference hall"
-              class="project-tile__img"
-              width="440"
-              height="340"
-              loading="lazy"
-            >
+            <img src="assets/images/event-backdrop.webp"
+              alt="Wide-format event promotional stage backdrop in a conference hall" class="project-tile__img"
+              width="440" height="340" loading="lazy">
             <div class="project-tile__overlay">
               <span class="project-tile__category">STAGE &amp; EXHIBITION</span>
               <h3 class="project-tile__title">Event Promotional Backdrops</h3>
@@ -438,14 +418,9 @@
 
           <!-- Project 4: Promotional Posters -->
           <article class="project-tile project-tile--4 reveal-on-scroll">
-            <img
-              src="assets/images/poster-printing.webp"
-              alt="High-contrast commercial promotional posters printed on satin art stock"
-              class="project-tile__img"
-              width="440"
-              height="340"
-              loading="lazy"
-            >
+            <img src="assets/images/poster-printing.webp"
+              alt="High-contrast commercial promotional posters printed on satin art stock" class="project-tile__img"
+              width="440" height="340" loading="lazy">
             <div class="project-tile__overlay">
               <span class="project-tile__category project-tile__category--orange">CAMPAIGN PRINT</span>
               <h3 class="project-tile__title">Promotional Posters</h3>
@@ -455,14 +430,9 @@
 
           <!-- Project 5: Retail Branding -->
           <article class="project-tile project-tile--5 reveal-on-scroll">
-            <img
-              src="assets/images/wall-graphics.webp"
+            <img src="assets/images/wall-graphics.webp"
               alt="Custom printed interior retail branding wall graphics in a commercial showroom"
-              class="project-tile__img"
-              width="440"
-              height="340"
-              loading="lazy"
-            >
+              class="project-tile__img" width="440" height="340" loading="lazy">
             <div class="project-tile__overlay">
               <span class="project-tile__category">INTERIOR GRAPHICS</span>
               <h3 class="project-tile__title">Retail Branding</h3>
@@ -472,18 +442,14 @@
 
           <!-- Project 6: Vehicle Graphics -->
           <article class="project-tile project-tile--6 reveal-on-scroll">
-            <img
-              src="assets/images/vehicle-branding.webp"
+            <img src="assets/images/vehicle-branding.webp"
               alt="Commercial delivery van receiving a custom printed vinyl vehicle branding wrap"
-              class="project-tile__img"
-              width="1200"
-              height="400"
-              loading="lazy"
-            >
+              class="project-tile__img" width="1200" height="400" loading="lazy">
             <div class="project-tile__overlay">
               <span class="project-tile__category project-tile__category--orange">TRANSIT &amp; FLEET MEDIA</span>
               <h3 class="project-tile__title">Vehicle Graphics</h3>
-              <p class="project-tile__meta">Conformable Cast &amp; Polymeric Vinyl Wraps for Vans, Trucks &amp; Commercial Fleets</p>
+              <p class="project-tile__meta">Conformable Cast &amp; Polymeric Vinyl Wraps for Vans, Trucks &amp;
+                Commercial Fleets</p>
             </div>
           </article>
         </div>
@@ -505,18 +471,14 @@
         <div class="why-layout">
           <aside class="why-visual-panel reveal-on-scroll">
             <div class="why-visual-panel__img-wrap">
-              <img
-                src="assets/images/printing-workshop.webp"
+              <img src="assets/images/printing-workshop.webp"
                 alt="Inside our professional printing workshop with wide-format digital plotters and finishing tables"
-                class="why-visual-panel__img"
-                width="600"
-                height="450"
-                loading="lazy"
-              >
+                class="why-visual-panel__img" width="600" height="450" loading="lazy">
             </div>
             <h3 class="why-visual-panel__caption">DEDICATED PRINT PRODUCTION STUDIO</h3>
             <p class="why-visual-panel__text">
-              Every project is inspected for sharp typography, vibrant colour consistency, clean edge trimming, and durable material finishing before handover.
+              Every project is inspected for sharp typography, vibrant colour consistency, clean edge trimming, and
+              durable material finishing before handover.
             </p>
             <div style="margin-top:1.25rem;">
               <a href="rate-card.html" class="btn btn--secondary btn--sm">
@@ -534,7 +496,8 @@
               </span>
               <h3 class="benefit-item__title">High-Quality Printing Output</h3>
               <p class="benefit-item__desc">
-                Rich ink density, crisp vector edges, and calibrated colour reproduction across small labels and massive outdoor flex banners alike.
+                Rich ink density, crisp vector edges, and calibrated colour reproduction across small labels and massive
+                outdoor flex banners alike.
               </p>
             </div>
 
@@ -545,7 +508,8 @@
               </span>
               <h3 class="benefit-item__title">Professional Finishing</h3>
               <p class="benefit-item__desc">
-                Precision hot-air hemming, rust-resistant metal eyelets, bubble-free sunboard mounting, matte/gloss lamination, and contour cutting.
+                Precision hot-air hemming, rust-resistant metal eyelets, bubble-free sunboard mounting, matte/gloss
+                lamination, and contour cutting.
               </p>
             </div>
 
@@ -556,7 +520,8 @@
               </span>
               <h3 class="benefit-item__title">Custom Sizes and Designs</h3>
               <p class="benefit-item__desc">
-                From compact product stickers to multi-panel building hoardings, we print to your exact architectural dimensions and layout specifications.
+                From compact product stickers to multi-panel building hoardings, we print to your exact architectural
+                dimensions and layout specifications.
               </p>
             </div>
 
@@ -567,7 +532,8 @@
               </span>
               <h3 class="benefit-item__title">Reliable Service</h3>
               <p class="benefit-item__desc">
-                Structured production scheduling and clear communication from initial artwork verification through final print inspection.
+                Structured production scheduling and clear communication from initial artwork verification through final
+                print inspection.
               </p>
             </div>
 
@@ -578,7 +544,8 @@
               </span>
               <h3 class="benefit-item__title">Competitive Pricing</h3>
               <p class="benefit-item__desc">
-                Transparent square-foot and per-unit quotation structures tailored to your selected substrate grade, finishing, and order volume.
+                Transparent square-foot and per-unit quotation structures tailored to your selected substrate grade,
+                finishing, and order volume.
               </p>
             </div>
 
@@ -589,7 +556,8 @@
               </span>
               <h3 class="benefit-item__title">Customer-Focused Support</h3>
               <p class="benefit-item__desc">
-                Practical guidance on choosing the right material—whether frontlit flex, backlit film, or laminated vinyl—for your installation environment.
+                Practical guidance on choosing the right material—whether frontlit flex, backlit film, or laminated
+                vinyl—for your installation environment.
               </p>
             </div>
           </div>
@@ -676,14 +644,9 @@
             </div>
           </div>
           <div class="promo-banner__media">
-            <img
-              src="assets/images/printing-workshop.webp"
+            <img src="assets/images/printing-workshop.webp"
               alt="Wide-format printing studio producing high-impact commercial banners and signage"
-              class="promo-banner__img"
-              width="700"
-              height="480"
-              loading="lazy"
-            >
+              class="promo-banner__img" width="700" height="480" loading="lazy">
           </div>
         </div>
       </div>
@@ -704,7 +667,7 @@
               From creative concepts to large-format prints, we bring your vision to life.
             </p>
           </div>
-          <div class="btn-group" style="flex-shrink:0;">
+          <div class="btn-group">
             <a href="products.html" class="btn btn--outline-dark">
               <span>EXPLORE PRODUCTS</span>
             </a>
@@ -724,33 +687,45 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
-        <!-- LEFT: Brand Logo + FLEX & BANNER PRINTING SHOP + Description -->
+        <!-- LEFT: Brand Logo + FLEXCO + Description -->
         <div>
-          <a href="index.html" class="brand-logo brand-logo--light" aria-label="Flex &amp; Banner Printing Shop Home">
-            <svg class="brand-logo__mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <rect x="2" y="2" width="44" height="44" rx="4" fill="#17191F"/>
-              <path d="M12 10H29L36 17V38H12V10Z" fill="#FFFFFF"/>
-              <path d="M29 10V17H36L29 10Z" fill="#2457FF"/>
-              <rect x="16" y="21" width="16" height="4" rx="1" fill="#2457FF"/>
-              <rect x="16" y="27" width="11" height="4" rx="1" fill="#FF6B35"/>
-              <circle cx="17.5" cy="34.5" r="1.5" fill="#00ADEF"/>
-              <circle cx="22" cy="34.5" r="1.5" fill="#EC008C"/>
-              <circle cx="26.5" cy="34.5" r="1.5" fill="#FFF200"/>
-              <circle cx="31" cy="34.5" r="1.5" fill="#17191F"/>
+          <a href="index.html" class="brand-logo brand-logo--light" aria-label="Flexco Home">
+            <svg class="brand-logo__mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true">
+              <rect x="2" y="2" width="44" height="44" rx="4" fill="#17191F" />
+              <path d="M12 10H29L36 17V38H12V10Z" fill="#FFFFFF" />
+              <path d="M29 10V17H36L29 10Z" fill="#2457FF" />
+              <rect x="16" y="21" width="16" height="4" rx="1" fill="#2457FF" />
+              <rect x="16" y="27" width="11" height="4" rx="1" fill="#FF6B35" />
+              <circle cx="17.5" cy="34.5" r="1.5" fill="#00ADEF" />
+              <circle cx="22" cy="34.5" r="1.5" fill="#EC008C" />
+              <circle cx="26.5" cy="34.5" r="1.5" fill="#FFF200" />
+              <circle cx="31" cy="34.5" r="1.5" fill="#17191F" />
             </svg>
             <div class="brand-logo__text">
-              <span class="brand-logo__title">FLEX &amp; BANNER PRINTING SHOP</span>
-              <span class="brand-logo__sub">YOUR IDEAS. OUR PRINT. BIG IMPACT.</span>
+              <span class="brand-logo__title">FLEXCO</span>
             </div>
           </a>
           <p class="footer-brand-desc">
-            From creative concepts to large-format prints, we bring your vision to life with professional flex banners, vinyl graphics, shop signage, standees, and custom advertising materials.
+            From creative concepts to large-format prints, we bring your vision to life with professional flex banners,
+            vinyl graphics, shop signage, standees, and custom advertising materials.
           </p>
-          <div class="cmyk-bar" aria-label="CMYK Print Registration Marks">
-            <span class="cmyk-dot cmyk-dot--c"></span>
-            <span class="cmyk-dot cmyk-dot--m"></span>
-            <span class="cmyk-dot cmyk-dot--y"></span>
-            <span class="cmyk-dot cmyk-dot--k"></span>
+          <div class="social-links" aria-label="Social Media Links">
+            <a href="#" class="social-link" aria-label="Follow us on Facebook" title="Facebook">
+              <i class="bi bi-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="Follow us on Instagram" title="Instagram">
+              <i class="bi bi-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="Follow us on X (Twitter)" title="X (Twitter)">
+              <i class="bi bi-twitter-x" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="Connect with us on LinkedIn" title="LinkedIn">
+              <i class="bi bi-linkedin" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="Subscribe on YouTube" title="YouTube">
+              <i class="bi bi-youtube" aria-hidden="true"></i>
+            </a>
           </div>
         </div>
 
@@ -771,11 +746,16 @@
         <div>
           <h3 class="footer-col__title">Our Services</h3>
           <ul class="footer-links">
-            <li><a href="products.html?category=flex-banners"><i class="bi bi-chevron-right" aria-hidden="true"></i> Flex Printing</a></li>
-            <li><a href="products.html?category=vinyl-printing"><i class="bi bi-chevron-right" aria-hidden="true"></i> Vinyl Printing</a></li>
-            <li><a href="products.html?category=poster-printing"><i class="bi bi-chevron-right" aria-hidden="true"></i> Poster Printing</a></li>
-            <li><a href="products.html?category=shop-signage"><i class="bi bi-chevron-right" aria-hidden="true"></i> Signage</a></li>
-            <li><a href="products.html?category=stickers-labels"><i class="bi bi-chevron-right" aria-hidden="true"></i> Sticker Printing</a></li>
+            <li><a href="products.html?category=flex-banners"><i class="bi bi-chevron-right" aria-hidden="true"></i>
+                Flex Printing</a></li>
+            <li><a href="products.html?category=vinyl-printing"><i class="bi bi-chevron-right" aria-hidden="true"></i>
+                Vinyl Printing</a></li>
+            <li><a href="products.html?category=poster-printing"><i class="bi bi-chevron-right" aria-hidden="true"></i>
+                Poster Printing</a></li>
+            <li><a href="products.html?category=shop-signage"><i class="bi bi-chevron-right" aria-hidden="true"></i>
+                Signage</a></li>
+            <li><a href="products.html?category=stickers-labels"><i class="bi bi-chevron-right" aria-hidden="true"></i>
+                Sticker Printing</a></li>
           </ul>
         </div>
 
@@ -800,7 +780,7 @@
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 FLEX &amp; BANNER PRINTING SHOP. All rights reserved.</p>
+        <p>&copy; 2026 FLEXCO. All rights reserved.</p>
         <div class="footer-legal-links">
           <a href="contact.html#privacy-notice">Privacy Policy (Placeholder)</a>
           <a href="contact.html#terms-notice">Terms &amp; Conditions (Placeholder)</a>
@@ -812,24 +792,30 @@
   <!-- ========================================================================
        WHATSAPP ENQUIRY CONFIGURABLE MODAL
        ======================================================================== -->
-  <div class="wa-modal-backdrop" id="waModalBackdrop" hidden role="dialog" aria-modal="true" aria-labelledby="waModalTitle">
+  <div class="wa-modal-backdrop" id="waModalBackdrop" hidden role="dialog" aria-modal="true"
+    aria-labelledby="waModalTitle">
     <div class="wa-modal">
       <div class="wa-modal__header">
         <h3 id="waModalTitle" style="font-size:1.05rem;text-transform:uppercase;">
           <i class="bi bi-whatsapp" style="color:#25D366;margin-right:0.4rem;" aria-hidden="true"></i>
           WhatsApp Enquiry Preview &amp; Setup
         </h3>
-        <button type="button" id="waModalClose" aria-label="Close WhatsApp modal" style="font-size:1.25rem;padding:0.25rem;">
+        <button type="button" id="waModalClose" aria-label="Close WhatsApp modal"
+          style="font-size:1.25rem;padding:0.25rem;">
           <i class="bi bi-x-lg" aria-hidden="true"></i>
         </button>
       </div>
       <div class="wa-modal__body">
         <p style="font-size:0.9rem;color:var(--color-text-muted);">
-          <strong>Editable Business WhatsApp Placeholder:</strong> Enter the shop's active WhatsApp number below (or configure <code>WHATSAPP_CONFIG.phoneNumber</code> in <code>assets/js/main.js</code>) to launch WhatsApp with your pre-formatted enquiry:
+          <strong>Editable Business WhatsApp Placeholder:</strong> Enter the shop's active WhatsApp number below (or
+          configure <code>WHATSAPP_CONFIG.phoneNumber</code> in <code>assets/js/main.js</code>) to launch WhatsApp with
+          your pre-formatted enquiry:
         </p>
         <div class="form-group">
-          <label for="waConfigNumberInput" class="form-label">Shop WhatsApp Number (With Country Code, e.g. 919876543210)</label>
-          <input type="tel" id="waConfigNumberInput" class="form-control" placeholder="e.g. 91XXXXXXXXXX (Editable Placeholder)">
+          <label for="waConfigNumberInput" class="form-label">Shop WhatsApp Number (With Country Code, e.g.
+            919876543210)</label>
+          <input type="tel" id="waConfigNumberInput" class="form-control"
+            placeholder="e.g. 91XXXXXXXXXX (Editable Placeholder)">
         </div>
         <div>
           <span class="form-label" style="margin-bottom:0.35rem;display:block;">Generated Enquiry Message:</span>
@@ -858,4 +844,5 @@
   <!-- Main Script -->
   <script src="assets/js/main.js"></script>
 </body>
+
 </html>

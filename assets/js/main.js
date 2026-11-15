@@ -27,13 +27,29 @@
   const WHATSAPP_CONFIG = {
     phoneNumber: '', // <-- Business Owner: Enter real WhatsApp number here (e.g. "919876543210")
     storageKey: 'fbp_configured_whatsapp_number',
-    businessName: 'FLEX & BANNER PRINTING SHOP'
+    businessName: 'FLEXCO'
   };
 
   const STORAGE_KEYS = {
     enquiryDraft: 'fbp_enquiry_draft_v1',
-    enquiryHistory: 'fbp_enquiry_submissions_v1'
+    enquiryHistory: 'fbp_enquiry_submissions_v1',
+    theme: 'fbp_theme_preference',
+    dir: 'fbp_dir_preference'
   };
+
+  // Apply persisted Theme & RTL direction immediately before paint
+  try {
+    const savedTheme = localStorage.getItem(STORAGE_KEYS.theme);
+    if (savedTheme === 'dark' || savedTheme === 'light') {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    }
+    const savedDir = localStorage.getItem(STORAGE_KEYS.dir);
+    if (savedDir === 'rtl' || savedDir === 'ltr') {
+      document.documentElement.setAttribute('dir', savedDir);
+    }
+  } catch {
+    // Ignore storage access errors
+  }
 
   const ALLOWED_ARTWORK_EXTENSIONS = [
     '.pdf', '.ai', '.eps', '.psd', '.cdr',
@@ -103,6 +119,67 @@
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll();
+
+    // Theme & RTL Toggle Controls
+    const themeToggle = document.getElementById('themeToggle');
+    const rtlToggle = document.getElementById('rtlToggle');
+
+    const syncThemeUI = (theme) => {
+      const isDark = theme === 'dark';
+      document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+      if (themeToggle) {
+        themeToggle.setAttribute('aria-pressed', String(isDark));
+        themeToggle.classList.toggle('is-active', isDark);
+        const icon = themeToggle.querySelector('i');
+        if (icon) {
+          icon.className = isDark ? 'bi bi-sun-fill' : 'bi bi-moon-stars-fill';
+        }
+      }
+    };
+
+    const syncRtlUI = (dir) => {
+      const isRtl = dir === 'rtl';
+      document.documentElement.setAttribute('dir', isRtl ? 'rtl' : 'ltr');
+      if (rtlToggle) {
+        rtlToggle.setAttribute('aria-pressed', String(isRtl));
+        rtlToggle.classList.toggle('is-active', isRtl);
+        const label = rtlToggle.querySelector('.nav-util-btn__label');
+        if (label) {
+          label.textContent = isRtl ? 'LTR' : 'RTL';
+        }
+      }
+    };
+
+    const initialTheme = document.documentElement.getAttribute('data-theme') || 'light';
+    const initialDir = document.documentElement.getAttribute('dir') || 'ltr';
+    syncThemeUI(initialTheme);
+    syncRtlUI(initialDir);
+
+    if (themeToggle) {
+      themeToggle.addEventListener('click', () => {
+        const current = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+        const next = current === 'dark' ? 'light' : 'dark';
+        syncThemeUI(next);
+        try {
+          localStorage.setItem(STORAGE_KEYS.theme, next);
+        } catch {
+          // Ignore storage errors
+        }
+      });
+    }
+
+    if (rtlToggle) {
+      rtlToggle.addEventListener('click', () => {
+        const current = document.documentElement.getAttribute('dir') === 'rtl' ? 'rtl' : 'ltr';
+        const next = current === 'rtl' ? 'ltr' : 'rtl';
+        syncRtlUI(next);
+        try {
+          localStorage.setItem(STORAGE_KEYS.dir, next);
+        } catch {
+          // Ignore storage errors
+        }
+      });
+    }
 
     if (!navToggle || !navMenu) return;
 
