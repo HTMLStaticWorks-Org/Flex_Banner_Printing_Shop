@@ -12,6 +12,9 @@
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/images/hero-printing.webp">
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
   <!-- Google Fonts: Space Grotesk & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -94,11 +97,16 @@
 
   <main id="main-content">
     <!-- ======================================================================
-         SECTION 1 — HERO
+         SECTION 1 — HERO (CINEMATIC FULL-BLEED STUDIO SHOWCASE)
          ====================================================================== -->
-    <section class="hero" aria-labelledby="hero-heading">
-      <div class="container hero__grid">
-        <div class="hero__content reveal-on-scroll">
+    <section class="hero hero--cinematic" aria-labelledby="hero-heading">
+      <div class="hero__bg-media" aria-hidden="true">
+        <img src="assets/images/image copy.png" alt="" class="hero__bg-img" width="1600" height="900" fetchpriority="high">
+        <div class="hero__bg-scrim"></div>
+      </div>
+
+      <div class="container hero__cinematic-inner">
+        <div class="hero__content hero__content--centered reveal-on-scroll">
           <div class="hero__tagline-bar">
             <span>YOUR IDEAS. OUR PRINT. BIG IMPACT.</span>
             <span class="cmyk-bar" aria-hidden="true">
@@ -133,46 +141,24 @@
               <i class="bi bi-grid-1x2" aria-hidden="true"></i>
             </a>
           </div>
-
-          <div class="hero__spec-strip">
-            <div class="hero__spec-item">
-              <span class="hero__spec-label">LARGE-FORMAT OUTPUT</span>
-              <span class="hero__spec-value">Flex, Vinyl &amp; Backlit Media</span>
-            </div>
-            <div class="hero__spec-item">
-              <span class="hero__spec-label">PRECISION COLOUR</span>
-              <span class="hero__spec-value">High-Definition Print Clarity</span>
-            </div>
-            <div class="hero__spec-item">
-              <span class="hero__spec-label">CUSTOM DIMENSIONS</span>
-              <span class="hero__spec-value">Tailored to Your Exact Space</span>
-            </div>
-          </div>
         </div>
 
-        <div class="hero__visual reveal-on-scroll">
-          <div class="hero__frame">
-            <div class="hero__frame-header">
-              <span>STUDIO PRODUCTION FEED // WIDE-FORMAT PLOTTER</span>
-              <span class="cmyk-bar" aria-hidden="true">
-                <span class="cmyk-dot cmyk-dot--c"></span>
-                <span class="cmyk-dot cmyk-dot--m"></span>
-                <span class="cmyk-dot cmyk-dot--y"></span>
-                <span class="cmyk-dot cmyk-dot--k"></span>
-              </span>
-            </div>
-            <div class="hero__image-wrap">
-              <img src="assets/images/hero-printing.webp"
-                alt="Large-format industrial printing machine producing a vibrant full-colour advertising banner in a modern printing studio"
-                class="hero__image" width="900" height="675" fetchpriority="high">
-            </div>
-            <div class="hero__floating-badge">
-              <div>
-                <div class="hero__floating-title">COMMERCIAL &amp; ADVERTISING GRADE</div>
-                <div class="hero__floating-sub">Outdoor Hoardings • Retail Signage • Event Branding</div>
-              </div>
-              <span class="hero__floating-tag">STUDIO SPEC</span>
-            </div>
+        <div class="hero__spec-dock reveal-on-scroll">
+          <div class="hero__spec-item">
+            <span class="hero__spec-label">LARGE-FORMAT OUTPUT</span>
+            <span class="hero__spec-value">Flex, Vinyl &amp; Backlit Media</span>
+          </div>
+          <div class="hero__spec-item">
+            <span class="hero__spec-label">PRECISION COLOUR</span>
+            <span class="hero__spec-value">High-Definition Print Clarity</span>
+          </div>
+          <div class="hero__spec-item">
+            <span class="hero__spec-label">CUSTOM DIMENSIONS</span>
+            <span class="hero__spec-value">Tailored to Your Exact Space</span>
+          </div>
+          <div class="hero__spec-item">
+            <span class="hero__spec-label">STUDIO GRADE</span>
+            <span class="hero__spec-value">Outdoor &amp; Retail Signage</span>
           </div>
         </div>
       </div>
@@ -201,8 +187,8 @@
           <article class="service-block service-block--span-7 reveal-on-scroll">
             <div class="service-block__media">
               <span class="service-block__index">SERVICE // 01</span>
-              <img src="assets/images/flex-banner.webp"
-                alt="Large outdoor commercial flex banner mounted on an architectural building frame"
+              <img src="assets/images/image copy 5.png"
+                alt="Large outdoor commercial flex banner hoarding mounted along a busy city avenue"
                 class="service-block__img" width="760" height="475" loading="lazy">
             </div>
             <div class="service-block__body">
@@ -228,8 +214,8 @@
           <article class="service-block service-block--span-5 reveal-on-scroll">
             <div class="service-block__media">
               <span class="service-block__index">SERVICE // 02</span>
-              <img src="assets/images/vinyl-printing.webp"
-                alt="Glossy self-adhesive vinyl print being applied smoothly onto an acrylic and glass board"
+              <img src="assets/images/image copy 6.png"
+                alt="Print installer applying glossy self-adhesive vinyl graphics onto a storefront glass window"
                 class="service-block__img" width="600" height="375" loading="lazy">
             </div>
             <div class="service-block__body">
@@ -255,8 +241,8 @@
           <article class="service-block service-block--span-4 reveal-on-scroll">
             <div class="service-block__media">
               <span class="service-block__index">SERVICE // 03</span>
-              <img src="assets/images/poster-printing.webp"
-                alt="High-resolution custom printed promotional posters arranged on a studio cutting table"
+              <img src="assets/images/image copy 7.png"
+                alt="Freshly printed high-resolution glossy posters stacked on a studio finishing table"
                 class="service-block__img" width="500" height="312" loading="lazy">
             </div>
             <div class="service-block__body">
@@ -280,8 +266,8 @@
           <article class="service-block service-block--span-4 reveal-on-scroll">
             <div class="service-block__media">
               <span class="service-block__index">SERVICE // 04</span>
-              <img src="assets/images/shop-signage.webp"
-                alt="Illuminated LED acrylic shop signage board mounted on a modern commercial storefront"
+              <img src="assets/images/image copy 14.png"
+                alt="Print technicians producing vibrant retail shop signage on a wide-format plotter"
                 class="service-block__img" width="500" height="312" loading="lazy">
             </div>
             <div class="service-block__body">
@@ -305,8 +291,8 @@
           <article class="service-block service-block--span-4 reveal-on-scroll">
             <div class="service-block__media">
               <span class="service-block__index">SERVICE // 05</span>
-              <img src="assets/images/rollup-standee.webp"
-                alt="Retractable aluminum roll-up banner standees displayed in a corporate exhibition venue"
+              <img src="assets/images/image copy 8.png"
+                alt="Retractable aluminum roll-up banner standees displayed in a modern corporate lobby"
                 class="service-block__img" width="500" height="312" loading="lazy">
             </div>
             <div class="service-block__body">
@@ -330,8 +316,8 @@
           <article class="service-block service-block--span-12 reveal-on-scroll">
             <div class="service-block__media">
               <span class="service-block__index">SERVICE // 06</span>
-              <img src="assets/images/sticker-printing.webp"
-                alt="Custom die-cut vinyl stickers and kiss-cut product packaging labels on a finishing workbench"
+              <img src="assets/images/image copy 9.png"
+                alt="Custom die-cut vinyl stickers and product packaging labels stacked on a dark studio surface"
                 class="service-block__img" width="720" height="450" loading="lazy">
             </div>
             <div class="service-block__body">
@@ -381,8 +367,8 @@
         <div class="projects-mosaic">
           <!-- Project 1: Outdoor Advertising Banners -->
           <article class="project-tile project-tile--1 reveal-on-scroll">
-            <img src="assets/images/flex-banner.webp"
-              alt="Large-scale outdoor advertising banner mounted on an urban commercial facade"
+            <img src="assets/images/image copy 15.png"
+              alt="Large-scale outdoor advertising banner mounted on a modern commercial building facade"
               class="project-tile__img" width="760" height="420" loading="lazy">
             <div class="project-tile__overlay">
               <span class="project-tile__category">LARGE-FORMAT HOARDING</span>
@@ -418,8 +404,8 @@
 
           <!-- Project 4: Promotional Posters -->
           <article class="project-tile project-tile--4 reveal-on-scroll">
-            <img src="assets/images/poster-printing.webp"
-              alt="High-contrast commercial promotional posters printed on satin art stock" class="project-tile__img"
+            <img src="assets/images/image copy 16.png"
+              alt="High-contrast commercial promotional posters displayed in mall lightbox frames" class="project-tile__img"
               width="440" height="340" loading="lazy">
             <div class="project-tile__overlay">
               <span class="project-tile__category project-tile__category--orange">CAMPAIGN PRINT</span>
@@ -430,8 +416,8 @@
 
           <!-- Project 5: Retail Branding -->
           <article class="project-tile project-tile--5 reveal-on-scroll">
-            <img src="assets/images/wall-graphics.webp"
-              alt="Custom printed interior retail branding wall graphics in a commercial showroom"
+            <img src="assets/images/image copy 12.png"
+              alt="Custom printed interior retail branding wall graphics and glass decals in a modern studio"
               class="project-tile__img" width="440" height="340" loading="lazy">
             <div class="project-tile__overlay">
               <span class="project-tile__category">INTERIOR GRAPHICS</span>
@@ -442,8 +428,8 @@
 
           <!-- Project 6: Vehicle Graphics -->
           <article class="project-tile project-tile--6 reveal-on-scroll">
-            <img src="assets/images/vehicle-branding.webp"
-              alt="Commercial delivery van receiving a custom printed vinyl vehicle branding wrap"
+            <img src="assets/images/image copy 13.png"
+              alt="Commercial delivery van featuring custom printed vinyl vehicle branding wrap"
               class="project-tile__img" width="1200" height="400" loading="lazy">
             <div class="project-tile__overlay">
               <span class="project-tile__category project-tile__category--orange">TRANSIT &amp; FLEET MEDIA</span>
@@ -471,8 +457,8 @@
         <div class="why-layout">
           <aside class="why-visual-panel reveal-on-scroll">
             <div class="why-visual-panel__img-wrap">
-              <img src="assets/images/printing-workshop.webp"
-                alt="Inside our professional printing workshop with wide-format digital plotters and finishing tables"
+              <img src="assets/images/image.png"
+                alt="Print technician inspecting a large-format banner print in our production workshop"
                 class="why-visual-panel__img" width="600" height="450" loading="lazy">
             </div>
             <h3 class="why-visual-panel__caption">DEDICATED PRINT PRODUCTION STUDIO</h3>
@@ -644,8 +630,8 @@
             </div>
           </div>
           <div class="promo-banner__media">
-            <img src="assets/images/printing-workshop.webp"
-              alt="Wide-format printing studio producing high-impact commercial banners and signage"
+            <img src="assets/images/image copy 17.png"
+              alt="Print craftsman installing metal grommet eyelets on a finished commercial banner"
               class="promo-banner__img" width="700" height="480" loading="lazy">
           </div>
         </div>
